@@ -28,7 +28,7 @@ export default function Movies() {
       (prev) =>
         prev.includes(option)
           ? prev.filter((opt) => opt !== option) // unselect if already selected
-          : [...prev, option] // add if not selected
+          : [...prev, option], // add if not selected
     );
   };
 
@@ -43,7 +43,7 @@ export default function Movies() {
       </div>
 
       {/* Scrollable Options */}
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center mb-8">
         <button
           onClick={() => scroll("left")}
           className="p-2 rounded-full hover:bg-[#EF99FE] transition hover:text-black cursor-pointer"
@@ -85,11 +85,39 @@ export default function Movies() {
         </button>
       </div>
 
-      {/* Movie Cards */}
-      <div className="flex gap-8 mt-4">
-        {movies.map((movie) => (
-          <MovieCard key={movie.id} image={movie.image} title={movie.title} />
-        ))}
+      {/* Movie Cards Carousel */}
+      <div className="relative group/carousel">
+        <button
+          onClick={() => {
+            const container = document.getElementById('movies-carousel');
+            if (container) container.scrollBy({ left: -300, behavior: 'smooth' });
+          }}
+          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/80 text-white p-3 rounded-full opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-300 cursor-pointer"
+        >
+          <GoArrowLeft size={24} />
+        </button>
+
+        <div
+          id="movies-carousel"
+          className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth py-4 px-2"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
+          {movies.map((movie) => (
+            <div key={movie.id} className="min-w-[160px] md:min-w-[200px]">
+              <MovieCard image={movie.image} title={movie.title} />
+            </div>
+          ))}
+        </div>
+
+        <button
+          onClick={() => {
+            const container = document.getElementById('movies-carousel');
+            if (container) container.scrollBy({ left: 300, behavior: 'smooth' });
+          }}
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/80 text-white p-3 rounded-full opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-300 cursor-pointer"
+        >
+          <GoArrowRight size={24} />
+        </button>
       </div>
     </section>
   );

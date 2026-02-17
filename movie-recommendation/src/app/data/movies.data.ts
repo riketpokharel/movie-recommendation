@@ -69,6 +69,41 @@ export const movies = [
     title: "Interstellar",
     image: "/assets/images/interstellar-thumb.jpg",
   },
+  {
+    id: 3,
+    title: "SpiderMan",
+    image: "/assets/images/spiderman1.jpg",
+  },
+  {
+    id: 4,
+    title: "SpiderMan 2",
+    image: "/assets/images/spiderman2.jpg",
+  },
+  {
+    id: 5,
+    title: "SpiderMan 3",
+    image: "/assets/images/spiderma3.jpg",
+  },
+  {
+    id: 6,
+    title: "John Wick",
+    image: "/assets/images/johnwick.jpg",
+  },
+  {
+    id: 7,
+    title: "John Wick 2",
+    image: "/assets/images/johnwick2.jpg",
+  },
+  {
+    id: 8,
+    title: "John Wick 3",
+    image: "/assets/images/johnwick3.jpg",
+  },
+  {
+    id: 9,
+    title: "John Wick 4",
+    image: "/assets/images/johnwick4.jpg",
+  },
 ];
 
 export interface GoldenGlobe {
