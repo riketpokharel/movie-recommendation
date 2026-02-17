@@ -1,22 +1,22 @@
-export const navLinks =[
+export const navLinks = [
     {
-        label:"Home",
-        path:"/",
+        label: "Home",
+        path: "/",
     },
     {
         label: "Movies",
-        path:"/movies",
+        path: "/#movies",
     },
     {
-        label:"Series",
-        path:"/series",
+        label: "Series",
+        path: "/#series",
     },
     {
-        label:"Blogs",
-        path:"/blogs"
+        label: "Trending",
+        path: "/#trending"
     },
     {
-        label:"FAQ",
-        path:"faqs"
+        label: "FAQ",
+        path: "/#faqs"
     }
 ]

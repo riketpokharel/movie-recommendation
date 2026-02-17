@@ -32,9 +32,9 @@ export default function KidsFooter() {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 text-sm font-semibold text-gray-300 text-center md:text-left">
                     <div className="flex flex-col gap-3">
                         <span className="text-white font-bold opacity-50 mb-1 uppercase tracking-wider text-xs">Watch</span>
-                        <a href="#" className="hover:text-yellow-400">Movies</a>
-                        <a href="#" className="hover:text-yellow-400">TV Shows</a>
-                        <a href="#" className="hover:text-yellow-400">Cartoons</a>
+                        <a href="/children/#trending" className="hover:text-yellow-400">Movies</a>
+                        <a href="/children/#adventures" className="hover:text-yellow-400">TV Shows</a>
+                        <a href="/children/#superheroes" className="hover:text-yellow-400">Cartoons</a>
                     </div>
                     <div className="flex flex-col gap-3">
                         <span className="text-white font-bold opacity-50 mb-1 uppercase tracking-wider text-xs">Support</span>

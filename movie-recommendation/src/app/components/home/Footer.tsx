@@ -37,10 +37,10 @@ export default function Footer() {
                     <div>
                         <h3 className="text-white font-semibold mb-6">Explore</h3>
                         <ul className="space-y-4 text-sm">
-                            {["Movies", "TV Shows", "Trending", "Top Rated", "New Arrivals"].map(
+                            {["Movies", "Series", "Trending", "Collections"].map(
                                 (item) => (
                                     <li key={item}>
-                                        <a href="#" className="hover:text-blue-400 transition-colors">
+                                        <a href={`/#${item.toLowerCase()}`} className="hover:text-blue-400 transition-colors">
                                             {item}
                                         </a>
                                     </li>

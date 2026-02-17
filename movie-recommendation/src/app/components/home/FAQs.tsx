@@ -34,7 +34,7 @@ export default function FAQs() {
     };
 
     return (
-        <section className="w-full py-20 px-6 md:px-16 text-white bg-[#030A1B]">
+        <section id="faqs" className="w-full py-20 px-6 md:px-16 text-white bg-[#030A1B]">
             <div className="text-center mb-16">
                 <h2 className="text-blue-400 font-semibold tracking-wide uppercase text-sm mb-2">
                     Common Questions

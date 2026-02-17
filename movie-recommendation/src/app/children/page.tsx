@@ -16,6 +16,7 @@ const kidsHero = {
 
 const categories = [
     {
+        id: "trending",
         title: "Trending Now ",
         movies: [
             { id: 1, image: "/assets/images/barbie.jpg" },
@@ -25,6 +26,7 @@ const categories = [
         ],
     },
     {
+        id: "superheroes",
         title: "Superheroes 🦸‍♂️",
         movies: [
             { id: 5, image: "/assets/images/darkknight-cover.jpg" },
@@ -34,6 +36,7 @@ const categories = [
         ],
     },
     {
+        id: "adventures",
         title: "Fun Adventures 🎈",
         movies: [
             { id: 9, image: "/assets/images/goldenglobe.jpg" },
@@ -89,7 +92,7 @@ export default function ChildrenPage() {
             {/* Rows */}
             <div className="pb-10 space-y-12">
                 {categories.map((cat, index) => (
-                    <section key={index} className="px-6 md:px-16">
+                    <section key={index} id={cat.id} className="px-6 md:px-16">
                         <h2 className="text-2xl md:text-3xl font-bold mb-6 text-yellow-300">{cat.title}</h2>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                             {cat.movies.map((movie) => (

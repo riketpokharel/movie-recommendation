@@ -7,7 +7,7 @@ import MovieCard from "../ui/MovieCard";
 
 export default function Trending() {
   return (
-    <section className="w-full px-6 md:px-16 py-20 bg-[#030A1B] text-white">
+    <section id="trending" className="w-full px-6 md:px-16 py-20 bg-[#030A1B] text-white">
       <div className="flex items-center justify-between mb-8">
         <h1 className="text-2xl md:text-3xl font-bold">Trending</h1>
         <p className="group flex items-center gap-1 md:gap-2 text-blue-500 cursor-pointer transition-all duration-300 font-medium">
@@ -22,7 +22,7 @@ export default function Trending() {
             const container = document.getElementById('trending-carousel');
             if (container) container.scrollBy({ left: -300, behavior: 'smooth' });
           }}
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/80 text-white p-3 rounded-full opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-300 cursor-pointer"
+          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/80 text-white p-3 rounded-full opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-300 cursor-pointer hidden md:block"
         >
           <GoArrowLeft size={24} />
         </button>
@@ -44,7 +44,7 @@ export default function Trending() {
             const container = document.getElementById('trending-carousel');
             if (container) container.scrollBy({ left: 300, behavior: 'smooth' });
           }}
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/80 text-white p-3 rounded-full opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-300 cursor-pointer"
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/80 text-white p-3 rounded-full opacity-0 group-hover/carousel:opacity-100 transition-opacity duration-300 cursor-pointer hidden md:block"
         >
           <GoArrowRight size={24} />
         </button>

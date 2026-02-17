@@ -32,8 +32,16 @@ export default function Navbar() {
         </ul>
 
         {/* Icons visible on desktop and minimal on mobile */}
-        <div className="hidden md:flex flex-row gap-4 text-xl text-white">
-          <BiSearch className="cursor-pointer  hover:text-blue-500 transition-all duration-300" />
+        <div className="hidden md:flex flex-row items-center gap-4 text-xl text-white">
+          <div className="relative group">
+            <input
+              type="text"
+              placeholder="Search..."
+              className="bg-black/50 border border-white/20 rounded-full py-1 px-4 pl-10 text-sm focus:outline-none focus:border-blue-500 w-0 group-hover:w-48 focus:w-48 transition-all duration-300 opacity-0 group-hover:opacity-100 focus:opacity-100 cursor-pointer focus:cursor-text"
+            />
+            <BiSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-white group-hover:text-blue-500 transition-colors pointer-events-none" />
+            <div className="absolute inset-0 flex items-center justify-center group-hover:hidden pointer-events-none"></div>
+          </div>
           <IoIosNotifications className="cursor-pointer  hover:text-blue-500 transition-all duration-300" />
           <BiUser className="cursor-pointer  hover:text-blue-500 transition-all duration-300" />
           <BsBrightnessHighFill className="cursor-pointer  hover:text-blue-500 transition-all duration-300" />

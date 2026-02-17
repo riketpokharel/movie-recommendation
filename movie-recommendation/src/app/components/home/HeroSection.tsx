@@ -35,19 +35,20 @@ export default function HeroSection() {
       {/* Overlay gradient */}
       <div className="absolute inset-0 bg-gradient-to-t from-[#030A1B] via-[#030A1B]/40 to-transparent"></div>
 
-      <div className="absolute bottom-18 md:left-16 left-6 z-10 text-white max-w-xl">
+      <div className="absolute bottom-20 md:left-16 left-6 z-10 text-white max-w-xl pr-6">
         <div>
           <h1 className="text-3xl md:text-5xl font-bold mb-3 drop-shadow-lg">
             {currentMovie.title}
           </h1>
-          <p className="text-lg mb-3 text-gray-200">
+          <p className="text-lg mb-3 text-gray-200 line-clamp-3 md:line-clamp-none">
             {currentMovie.description}
           </p>
         </div>
-        <div className="flex items-center gap-3 mb-5">
-          <h3>⭐⭐⭐⭐</h3>
-          <h4 className="text-lg font-medium">
-            {" "}
+        <div className="flex items-center gap-3 mb-5 flex-wrap">
+          <div className="flex items-center gap-1">
+            <h3>⭐⭐⭐⭐</h3>
+          </div>
+          <h4 className="text-lg font-medium flex items-center gap-2">
             <span className="bg-yellow-400 text-black px-1 rounded-lg font-bold">
               IMDb
             </span>{" "}
@@ -62,16 +63,15 @@ export default function HeroSection() {
             className="object-contain"
           />
         </div>
-        <div className="flex items-center gap-4 cursor-pointer">
-          <h2 className="flex items-center gap-2 rounded-3xl py-3 px-8 bg-blue-600">
-            {" "}
+        <div className="flex flex-wrap items-center gap-4">
+          <button className="flex items-center gap-2 rounded-3xl py-3 px-8 bg-blue-600 hover:bg-blue-700 transition-colors text-white font-semibold">
             <FaPlay />
             Watch Now
-          </h2>
-          <h2 className="flex items-center rounded-3xl ring-1 py-3 px-8 ring-blue-400 gap-1">
+          </button>
+          <button className="flex items-center rounded-3xl ring-1 py-3 px-8 ring-blue-400 gap-1 hover:bg-white transition-all duration-200 hover:text-black font-semibold bg-black/30 backdrop-blur-sm">
             More Info
             <FaArrowRightLong />
-          </h2>
+          </button>
         </div>
       </div>
     </section>
