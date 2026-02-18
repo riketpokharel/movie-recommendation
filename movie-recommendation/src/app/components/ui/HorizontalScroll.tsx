@@ -17,7 +17,7 @@ interface HorizontalScrollProps {
 export default function HorizontalScroll({
   items,
   borderColor = "#812bc7",
-  hoverColor = "#EF99FE",
+
   activeColor = "#812bc7",
   textColor = "#000000",
   scrollAmount = 200,

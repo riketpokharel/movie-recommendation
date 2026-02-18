@@ -1,9 +1,9 @@
 "use client";
 import Link from "next/link";
 import { navLinks } from "@/app/data/navLinks";
-import { BiSearch, BiUser, BiMenu, BiX } from "react-icons/bi";
+import { BiSearch, BiMenu, BiX } from "react-icons/bi";
 import { IoIosNotifications } from "react-icons/io";
-import { BsBrightnessHighFill, BsBrightnessHigh } from "react-icons/bs";
+import { BsBrightnessHighFill } from "react-icons/bs";
 import { RiMovie2Line } from "react-icons/ri";
 import { useState } from "react";
 import { FiUser } from "react-icons/fi";
