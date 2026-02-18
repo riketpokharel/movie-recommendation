@@ -27,7 +27,11 @@ body {
 
 @import "tailwindcss";
 
-:root{
-  --background:#030A1B;
-  --foreground:#ffffff;
+:root {
+  --background: #030A1B;
+  --foreground: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
 }

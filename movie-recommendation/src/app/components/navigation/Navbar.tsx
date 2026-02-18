@@ -6,6 +6,7 @@ import { IoIosNotifications } from "react-icons/io";
 import { BsBrightnessHighFill, BsBrightnessHigh } from "react-icons/bs";
 import { RiMovie2Line } from "react-icons/ri";
 import { useState } from "react";
+import { FiUser } from "react-icons/fi";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,9 +43,19 @@ export default function Navbar() {
             <BiSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-white group-hover:text-blue-500 transition-colors pointer-events-none" />
             <div className="absolute inset-0 flex items-center justify-center group-hover:hidden pointer-events-none"></div>
           </div>
-          <IoIosNotifications className="cursor-pointer  hover:text-blue-500 transition-all duration-300" />
-          <BiUser className="cursor-pointer  hover:text-blue-500 transition-all duration-300" />
-          <BsBrightnessHighFill className="cursor-pointer  hover:text-blue-500 transition-all duration-300" />
+          <div className="relative group flex items-center">
+            <IoIosNotifications className="cursor-pointer hover:text-blue-500 transition-all duration-300" />
+            <div className="absolute top-8 left-1/2 transform -translate-x-1/2 bg-white text-black text-sm font-medium px-4 py-2 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none w-max z-50">
+              You&apos;ll get your notifications here
+            </div>
+          </div>
+          <Link href="/login" className="relative group flex items-center">
+            <FiUser className="cursor-pointer hover:text-blue-500 transition-all duration-300" />
+            <span className="absolute top-8 left-1/2 transform -translate-x-1/2 bg-white text-black text-xs font-medium px-2 py-1 rounded shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+              Login
+            </span>
+          </Link>
+          {/* <BsBrightnessHighFill className="cursor-pointer  hover:text-blue-500 transition-all duration-300" /> */}
         </div>
 
         {/* Mobile HamburgerButton */}
@@ -72,7 +83,7 @@ export default function Navbar() {
             <div className="flex gap-4 mt-4 text-xl">
               <BiSearch />
               <IoIosNotifications />
-              <BiUser />
+              <FiUser />
               <BsBrightnessHighFill />
             </div>
           </div>

@@ -104,7 +104,7 @@ export default function Series() {
         >
           {movies.map((movie) => (
             <div key={movie.id} className="min-w-[160px] md:min-w-[200px]">
-              <MovieCard image={movie.image} title={movie.title} />
+              <MovieCard id={movie.id} image={movie.image} title={movie.title} />
             </div>
           ))}
         </div>
